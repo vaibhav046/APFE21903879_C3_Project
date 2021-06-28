@@ -92,31 +92,31 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //<<<<<<<<<<<<<<<<<<<<<<<ITEMS>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//    @Test
-//    public void get_total_price_of_all_selected_items_from_menu() {
-//
-//        //act
-//        int total = res.orderTotal(res.getMenu());
-//        int expectedTotal = expectedTotal(res.getMenu());
-//
-//        //assert
-//        assertTrue(res.getMenu().size()>0);
-//        verify(res).orderTotal(argThat(x->{
-//            assertNotNull(x);
-//            assertTrue(x.size()>0);
-//            assertEquals(res.getMenu().size(),x.size());
-//            return true;
-//        }));
-//        assertTrue(total > 0);
-//        assertEquals(expectedTotal, total);
-//
-//    }
-//
-//    private int expectedTotal(List<Item> items) {
-//        int sum = 0;
-//        for (Item item : items) {
-//            sum = sum + item.getPrice();
-//        }
-//        return sum;
-//    }
+    @Test
+    public void get_total_price_of_all_selected_items_from_menu() {
+
+        //act
+        int total = res.orderTotal(res.getMenu());
+        int expectedTotal = expectedTotal(res.getMenu());
+
+        //assert
+        assertTrue(res.getMenu().size()>0);
+        verify(res).orderTotal(argThat(x->{
+            assertNotNull(x);
+            assertTrue(x.size()>0);
+            assertEquals(res.getMenu().size(),x.size());
+            return true;
+        }));
+        assertTrue(total > 0);
+        assertEquals(expectedTotal, total);
+
+    }
+
+    private int expectedTotal(List<Item> items) {
+        int sum = 0;
+        for (Item item : items) {
+            sum = sum + item.getPrice();
+        }
+        return sum;
+    }
 }

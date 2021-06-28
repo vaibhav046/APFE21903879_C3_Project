@@ -44,14 +44,14 @@ public class Restaurant {
     }
 
 
-//    public int orderTotal(List<Item> items) {
-//        int total = 0;
+    public int orderTotal(List<Item> items) {
+        int total = 0;
 //        for(Item item:items){
 //            if(findItemByName(item.getName())!=null)
 //            total+=item.getPrice();
 //        }
-//        return total;
-//    }
+        return total;
+    }
 
     public void addToMenu(String name, int price) {
         Item newItem = new Item(name, price);
